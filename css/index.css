@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
 :root{
-  --Very-Dark-Magenta: hsl(300, 43%, 22%);
-  --Soft-Pink: hsl(333, 80%, 67%);
-  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
-  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
-  --White:hsl(0, 0%, 100%);
+  --Blue: hsl(223, 87%, 63%);
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
 }
 html {
   box-sizing: border-box;
@@ -18,167 +18,145 @@ html {
   padding: 0;
 }
 body{
+  height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
-  font-family: 'League Spartan', sans-serif;
-  padding-block: 2rem;
+  font-size: 2rem;
+  font-family: 'Libre Franklin', sans-serif;
+  
 }
-.main{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-  padding-inline: 3.15rem;
-}
-.main .main__texts{
-  text-align: center;
-}
-.main .main__texts .title{
-  font-size: 4rem;
-  margin: 0 auto;
-  color: var(--Very-Dark-Magenta);
-}
-.main .main__texts .paragraph{
-  color: var(--Dark-Grayish-Magenta);
-  line-height: 2.1rem;
-  margin-top: 2rem;
-  font-weight: 500;
-}
-.main .main__stars{
+.hero{
   max-width: 35rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 9rem;
   text-align: center;
+}
+.hero .hero__header .title{
+  font-size: 3rem;
+  color: var(--Gray);
+  font-weight: 300;
+  margin-block: 3rem;
+}
+.hero .hero__header .title span{
+  color: var(--Very-Dark-Blue);
+  font-weight: 700;
+}
+.hero .hero__header .subtitle{
+  margin-block: 3rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.hero .formulario{
+  margin-block:2rem;
+}
+.hero .formulario input{
+  display: block;
+  width: 100%;
+  border: 1px solid var(--Pale-Blue);
+  border-radius: 2.5rem;
+  padding: 1.5rem 3rem;
+}
+.hero .formulario input:invalid{
+  border: 1px solid red;
+}
+.hero .formulario input::placeholder{
+  color: var(--Pale-Blue);
+}
+.hero .formulario input.error{
+  border: 1px solid red;
+}
+.hero .formulario input.error::placeholder{
+  color: var(--Light-Red);
+}
+.hero .formulario small{
+  display: none;
+  color: var(--Light-Red);
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-style: italic;
+}
+.hero .formulario .cta{
+  width: 100%;
+  padding: 1.7rem;
+  margin-top: 1rem;
+  background-color: var(--Blue);
+  border: none;
+  border-radius: 2.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  box-shadow: 1px 10px 30px -7px var(--Blue);
+-webkit-box-shadow: 1px 10px 30px -7px var(--Blue);
+-moz-box-shadow: 1px 10px 30px -7px var(--Blue);
+  transition: background-color 0.2s ease-in;
+}
+.hero .formulario .cta:hover{
+  background-color: var(--Pale-Blue);
+}
+.hero__dash img{
   width: 100%;
 }
-.main .main__stars .star{
-  padding: 1.2rem;
-  border-radius: 0.8rem;
-  background-color: var(--Light-Grayish-Magenta);
+.hero__footer{
+  color: var(--Gray);
 }
-.main .main__stars .star .star__text{
-  margin-top: 0.8rem;
-  color: var(--Very-Dark-Magenta);
-  font-weight: 600;
-}
-.main .testimony{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  color: var(--White);
-}
-.main .testimony .card__testimony{
-  max-width: 35rem;
-  border-radius: 0.8rem;
-  border: none;
-  background-color: var(--Very-Dark-Magenta);
-  padding: 2.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-.main .testimony .card__testimony .card__header{
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-.main .testimony .card__testimony .card__header img{
-  width: 35px;
-  height: 35px;
+.hero__footer .icons i{
+  color: var(--Blue);
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   border-radius: 50%;
+  border: 1px solid var(--Pale-Blue);
+  cursor: pointer;
 }
-.main .testimony .card__testimony .card__header p{
-  margin-bottom: 0.5rem;
+.hero__footer .icons i:hover{
+  background-color: var(--Blue);
+  color: white;
 }
-.main .testimony .card__testimony .card__header span{
-  color: var(--Soft-Pink);
-  font-weight: 500;
+.hero__footer .icons i:nth-of-type(2){
+  margin-inline: 1rem;
 }
-.main .testimony .card__testimony .card__content{
-  font-weight: 300;
-  line-height: 1.8rem;
+.hero__footer .copy{
+  margin-top: 3rem;
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width:920px) {
   body{
-    height: 100vh;
-    background-image: url('../assets/images/bg-pattern-top-desktop.svg'), url('../assets/images/bg-pattern-bottom-desktop.svg');
-    background-repeat: no-repeat, no-repeat;
-    background-position: right 60vw bottom 65vh, left 20vw top 50vh;
+    overflow-x: hidden;
   }
-  .main{
-    max-width: 90rem;
-    display: grid;
-    gap: 5rem 13.5rem;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    grid-template-areas: 
-    "texts   starts"
-    "testimony  testimony";
+  .hero{
+    max-width: 80rem;
   }
-  .main .main__texts{
-    grid-area: texts;
-    text-align: left;
+  .hero__dash{
+    width: 85%;
+    text-align: center;
+    margin: 0 auto;
   }
-  .main .main__texts .title{
-    width: 90%;
-    margin: 0;
+  .hero .hero__header .title{
+    font-size: 4rem;
   }
-  .main__stars{
-    grid-area: starts;
-  }
-  .main .testimony{
-    grid-area: testimony;
-    flex-direction: row;
-  }
-  .pr-2{
-    position: relative;
-    top: 1rem;
-  }
-  .pr-4{
-    position: relative;
-    top: 2rem;
-  }
-}
-@media screen and (min-width:1280px) {
-  .main{
-    max-width: 102rem;
-  }
-  .main .main__texts .title{
-    width: 80%;
-    margin: 0;
-    font-size: 4.5rem;
-  }
-  .main .main__texts .paragraph{
-    font-size: 1.7rem;
-  }
-  .main .main__stars .star{
+  .hero .formulario{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 1rem;
-    padding: 1.8rem;
-  }
-  .main .main__stars .star .star__text{
-    margin: 0;
-  }
-  .main .testimony .card__testimony{
-    max-width: 40rem;
-    padding: 4rem 2.8rem;
-  }
-  .ml-2{
+    width: 100%;
     position: relative;
-    left: 2.5rem;
   }
-  .ml-4{
-    position: relative;
-    left: 5rem;
+  .hero .formulario input{
+    width: 50%;
+  }
+  .hero .formulario .cta{
+    margin-top: 0;
+    width: 30%;
+  }
+  .hero .formulario small{
+    position: absolute;
+    left: 10%;
+    bottom: -40%;
   }
 }
-
-

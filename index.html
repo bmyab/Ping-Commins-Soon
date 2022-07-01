@@ -1,98 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Mentor | Social proof section</title>
-    <link rel="stylesheet" href="css/index.css">
-  </head>
-  <body>
-    <main class="main">
-      <section class="main__texts">
-        <h1 class="title">10,000+ of our users love our products.</h1>
-        <p class="paragraph">We only provide great products combined with excellent customer service.
-          See what our satisfied customers are saying about our services.</p>
-      </section>
-      <section class="main__stars">
-        <div class="star">
-          <div class="star__icon">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-          </div>
-          <div class="star__text">
-            <p>Rated 5 Stars in Reviews</p>
-          </div>
-        </div>
-        <div class="star ml-2">
-          <div class="star__icon">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-          </div>
-          <div class="star__text">
-            <p>Rated 5 Stars in Report Guru</p>
-          </div>
-        </div>
-        <div class="star ml-4">
-          <div class="star__icon">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-            <img src="assets/images/icon-star.svg" alt="Icon Star">
-          </div>
-          <div class="star__text">
-            <p>Rated 5 Stars in BestTech</p>
-          </div>
-        </div>
-      </section>
-      <section class="testimony">
-        <article class="card__testimony">
-          <header class="card__header">
-            <img src="assets/images/image-colton.jpg" alt="Persona Image">
-            <div>
-              <p>Colton Smith</p>
-              <span>Verified Buyer</span> 
-            </div>
-          </header>
-          <div class="card__content">
-            <p>"We needed the same printed design as the one we had ordered a week prior.
-              Not only did they find the original order, but we also received it in time.
-              Excellent!"</p>
-          </div>
-        </article>
-        <article class="card__testimony pr-2">
-          <header class="card__header">
-            <img src="assets/images/image-irene.jpg" alt="Persona Image">
-            <div>
-              <p>Irene Roberts </p>
-              <span>Verified Buyer</span> 
-            </div>
-          </header>
-          <div class="card__content">
-            <p>"Customer service is always excellent and very quick turn around. Completely
-              delighted with the simplicity of the purchase and the speed of delivery."</p>
-          </div>
-        </article>
-        <article class="card__testimony pr-4">
-          <header class="card__header">
-            <img src="assets/images/image-anne.jpg" alt="Persona Image">
-            <div>
-              <p>Anne Wallace</p>
-              <span>Verified Buyer</span> 
-            </div>
-          </header>
-          <div class="card__content">
-            <p>"Put an order with this company and can only praise them for the very high
-              standard. Will definitely use them again and recommend them to everyone!"</p>
-          </div>
-        </article>
-      </section>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Ping coming soon page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <main class="hero">
+    <header class="hero__header">
+      <img src="assets/images/logo.svg" alt="Logo Ping">
+      <h1 class="title"> We are launching
+        <span>soon!</span>
+      </h1>
+      <h3 class="subtitle">Subscribe and get notified</h3>
+      <form class="formulario" id="form">
+        <input id="email" type="email" placeholder="Your email address...">
+        <small>Please provide a valid emaill address</small>
+        <button class="cta" type="submit">Notify Me</button>
+      </form>
+    </header>
+    <figure class="hero__dash">
+        <img src="assets/images/illustration-dashboard.png" alt="Dashboard image">
+    </figure>
+    <footer class="hero__footer">
+      <div class="icons">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      <p class="copy">&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+<script src="js/index.js"></script>
 </html>
